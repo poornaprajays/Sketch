@@ -25,3 +25,4 @@
 - Documentation entry section 23 detailing project structure.
 - Documentation entry section 24 detailing project structure.
 - Documentation entry section 25 detailing project structure.
+- Documentation entry section 26 detailing project structure.
