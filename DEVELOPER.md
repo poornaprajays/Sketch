@@ -8,3 +8,4 @@
 - Documentation entry section 6 detailing project structure.
 - Documentation entry section 7 detailing project structure.
 - Documentation entry section 8 detailing project structure.
+- Documentation entry section 9 detailing project structure.
