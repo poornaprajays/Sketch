@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Patrick+Hand&display=swap');
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-pencil: #2d2d2d;
+  --color-paper: #fdfbf7;
+  --color-erased: #e5e0d8;
+  --color-correction: #ff4d4d;
+  --color-ballpoint: #2d5da1;
+}
+
+/* Base Sketched Styles */
+body {
+  font-family: 'Patrick Hand', cursive;
+  background-color: #fdfbf7;
+  color: #2d2d2d;
+  background-image: radial-gradient(#e5e0d8 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease, background-image 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .font-marker {
+  font-family: 'Kalam', cursive;
+  font-weight: 700;
+}
+
+/* Wobbly Input */
+.wobbly-input {
+  border: 3px solid #2d2d2d;
+  border-radius: 255px 20px 225px 15px / 20px 225px 15px 255px;
+}
+
+/* Highlighter Text Marker */
+.marker-highlight {
+  position: relative;
+  z-index: 1;
+}
+
+.marker-highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1em;
+  width: 100%;
+  height: 0.45em;
+  background-color: #dfff4f;
+  z-index: -1;
+  transform: rotate(-1deg);
+  border-radius: 4px;
+}
+
+.dark .marker-highlight::after {
+  background-color: #4a5d00;
+}
+
+.marker-highlight-red::after {
+  background-color: #ffcccc;
+}
+
+.dark .marker-highlight-red::after {
+  background-color: #5d2222;
+}
+
+/* Wavy underline decoration for links */
+.wavy-underline {
+  text-decoration: none;
+  background-image: radial-gradient(circle at 50% 100%, #2d2d2d 20%, transparent 20%);
+  background-position: 0 100%;
+  background-size: 8px 4px;
+  background-repeat: repeat-x;
+  padding-bottom: 3px;
+}
+
+.dark .wavy-underline {
+  background-image: radial-gradient(circle at 50% 100%, #fdfbf7 20%, transparent 20%);
+}
+
+.wavy-underline:hover {
+  background-image: radial-gradient(circle at 50% 100%, #ff4d4d 20%, transparent 20%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fdfbf7;
+  border-left: 2px solid #2d2d2d;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-left: 2px solid #fdfbf7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e0d8;
+  border: 2px solid #2d2d2d;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border: 2px solid #fdfbf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d4d;
+}
+
+/* Custom animations */
+@keyframes scribble-bounce {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-4px) rotate(-1deg); }
+}
+
+.animate-scribble-bounce {
+  animation: scribble-bounce 3s ease-in-out infinite;
+}
+
+/* Marquee scrolling transition */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-custom {
+  animation: marquee 25s linear infinite;
+}
+
+/* Floating top button */
+.top-btn {
+  border-radius: 12px 18px 10px 14px / 14px 10px 18px 12px;
+}
