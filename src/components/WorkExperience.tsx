@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { WobblyButton } from './ui/WobblyButton';
+
 
 export const WorkExperience: React.FC = () => {
   const experiences = portfolioData.experience;
