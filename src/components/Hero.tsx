@@ -21,8 +21,8 @@ export const Hero: React.FC = () => {
 
   return (
     <section id="hero" className="min-h-[80vh] flex flex-col justify-center items-center text-center relative py-12">
-      <p className="text-xl md:text-2xl text-pencil/70 dark:text-paper/70 font-semibold mb-2 font-body">Hi, I'm</p>
-      <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-pencil dark:text-paper mb-4 leading-none font-marker">
+      <p className="text-xl md:text-2xl text-pencil/70 dark:text-paper/70 font-semibold mb-4 font-body">Hi, I'm</p>
+      <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-pencil dark:text-paper mb-4 leading-tight font-marker">
         {data.name}
       </h1>
 
