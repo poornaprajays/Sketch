@@ -86,7 +86,7 @@ export const WorkExperience: React.FC = () => {
                 };
                 return (
                   <div className="pt-4 border-t border-dashed border-pencil/20 dark:border-paper/20">
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, sIdx) => {
                         const cat = skillCategory[skill] ?? 'core';
                         const hoverClass = hoverColors[cat];
@@ -94,7 +94,7 @@ export const WorkExperience: React.FC = () => {
                           <span
                             key={sIdx}
                             style={{ borderRadius: '80px 12px 80px 12px / 12px 80px 12px 80px' }}
-                            className={`px-2.5 py-0.5 text-[11px] font-semibold border border-pencil dark:border-paper/40 bg-white dark:bg-zinc-900 text-pencil dark:text-paper/80 tracking-wide cursor-default transition-all duration-200 hover:scale-105 hover:-translate-y-px hover:shadow-[2px_2px_0px_0px_#2d2d2d] dark:hover:shadow-[2px_2px_0px_0px_rgba(253,251,247,0.3)] ${hoverClass}`}
+                            className={`px-2.5 py-0.5 text-xs font-semibold border border-pencil dark:border-paper/40 bg-white dark:bg-zinc-900 text-pencil dark:text-paper/80 tracking-wide cursor-default transition-all duration-200 hover:scale-105 hover:-translate-y-px hover:shadow-[2px_2px_0px_0px_#2d2d2d] dark:hover:shadow-[2px_2px_0px_0px_rgba(253,251,247,0.3)] ${hoverClass}`}
                           >
                             {skill}
                           </span>
