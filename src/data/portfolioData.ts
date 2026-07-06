@@ -127,7 +127,7 @@ export const portfolioData: PortfolioData = {
       company: "Anamtya Technologies Pvt. Ltd.",
       location: "Bengaluru, India",
       role: "Software Engineering Intern (AI/ML)",
-      timeline: "Dec, 2025 – Ongoing",
+      timeline: "Jan, 2026 – Ongoing",
       letterLink: "https://www.dropbox.com/scl/fi/eqwvmie4reradduuiahea/intership_prajay.jpeg?rlkey=q8sqiu7ckdj7d1pzskw53546l&st=tw88otqy&dl=0",
       logoChar: "A",
       responsibilities: [
