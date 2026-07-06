@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
       </h1>
 
       {/* Rotating Subtitle */}
-      <div className="h-12 mb-6 flex items-center justify-center">
+      <div className="min-h-[3rem] mb-6 flex items-center justify-center overflow-hidden px-4">
         <span 
           className={`text-3xl md:text-4xl font-marker text-ballpoint dark:text-cyan-400 transition-all duration-200 transform ${
             rotatorOpacity ? 'opacity-100 scale-100' : 'opacity-0 scale-95'

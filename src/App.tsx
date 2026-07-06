@@ -16,7 +16,7 @@ const App: React.FC = () => {
       <Header />
 
       {/* Main Page Container */}
-      <main className="max-w-5xl mx-auto px-6 md:px-12 py-12">
+      <main className="max-w-5xl mx-auto px-6 md:px-12 py-8 md:py-12">
         {/* Landing Hero Section */}
         <Hero />
 

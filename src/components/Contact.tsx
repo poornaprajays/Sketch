@@ -38,7 +38,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-xs text-pencil/50 dark:text-paper/50 uppercase tracking-wider font-bold">Email</p>
-                  <p className="text-base md:text-lg font-bold text-pencil dark:text-paper">{data.email}</p>
+                  <p className="text-base md:text-lg font-bold text-pencil dark:text-paper break-all">{data.email}</p>
                 </div>
               </div>
             </a>
