@@ -88,8 +88,16 @@ export const Contact: React.FC = () => {
           style={{ borderRadius: '20px 240px 20px 220px / 220px 20px 240px 20px' }}
           className="relative flex flex-col justify-between gap-6 bg-[#fff9c4] dark:bg-zinc-800 border-[3px] border-pencil dark:border-paper shadow-[4px_4px_0px_0px_#2d2d2d] dark:shadow-[4px_4px_0px_0px_#fdfbf7] p-6 md:p-8 rotate-[-1deg]"
         >
-          {/* Tape strip overlay */}
-          <div className="absolute -top-3.5 left-1/4 right-1/4 h-5 bg-white/70 dark:bg-zinc-700/60 border-x border-pencil/20 rotate-[1deg] pointer-events-none" />
+          {/* Tape strip — centered top */}
+          <div
+            className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 rotate-[-1deg] pointer-events-none"
+            style={{
+              background: 'rgba(200, 200, 200, 0.80)',
+              backgroundImage: 'repeating-linear-gradient(105deg, transparent, transparent 5px, rgba(255,255,255,0.25) 5px, rgba(255,255,255,0.25) 10px)',
+              boxShadow: '0 2px 5px rgba(0,0,0,0.15)',
+              borderRadius: '2px',
+            }}
+          />
 
           <div>
             <span 
