@@ -30,7 +30,7 @@ export const WorkExperience: React.FC = () => {
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4 pb-3 border-b-2 border-dashed border-erased dark:border-paper/20">
                 <div className="flex items-center gap-4">
                   {/* Company Logo placeholder */}
-                  <div 
+                  <div
                     style={{ borderRadius: '20px 240px 20px 220px / 220px 20px 240px 20px' }}
                     className="w-12 h-12 flex items-center justify-center bg-[#ffe0b2] dark:bg-amber-900 border-2 border-pencil dark:border-paper font-bold text-xl text-pencil dark:text-paper shrink-0"
                   >
@@ -41,9 +41,9 @@ export const WorkExperience: React.FC = () => {
                     <p className="text-base font-semibold text-ballpoint dark:text-cyan-400">{exp.company}</p>
                   </div>
                 </div>
-                
+
                 <div className="text-left md:text-right">
-                  <span 
+                  <span
                     style={{ borderRadius: '120px 15px 100px 15px / 15px 110px 15px 120px' }}
                     className="inline-block text-sm font-bold bg-[#fff9c4] dark:bg-yellow-900 px-2.5 py-1 border-2 border-pencil dark:border-paper text-pencil dark:text-paper"
                   >
@@ -64,33 +64,50 @@ export const WorkExperience: React.FC = () => {
               </ul>
 
               {/* Skills badges */}
-              <div className="flex flex-wrap gap-2 pt-2">
-                {exp.skills.map((skill, sIdx) => (
-                  <span
-                    key={sIdx}
-                    style={{ borderRadius: '120px 15px 100px 15px / 15px 110px 15px 120px' }}
-                    className="px-2 py-0.5 text-xs font-semibold bg-white dark:bg-zinc-800 border border-pencil dark:border-paper/40 text-pencil dark:text-paper"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              {(() => {
+                // Hover-only category colors — badges are plain white at rest
+                const hoverColors: Record<string, string> = {
+                  core:     'hover:bg-[#fff3e0] hover:border-amber-400 hover:text-amber-900 dark:hover:bg-amber-900/50 dark:hover:border-amber-400 dark:hover:text-amber-200',
+                  frontend: 'hover:bg-[#e8f5e9] hover:border-emerald-400 hover:text-emerald-900 dark:hover:bg-emerald-900/50 dark:hover:border-emerald-400 dark:hover:text-emerald-200',
+                  systems:  'hover:bg-[#e3f2fd] hover:border-blue-400 hover:text-blue-900 dark:hover:bg-blue-900/50 dark:hover:border-blue-400 dark:hover:text-blue-200',
+                  tools:    'hover:bg-[#f3e5f5] hover:border-purple-400 hover:text-purple-900 dark:hover:bg-purple-900/50 dark:hover:border-purple-400 dark:hover:text-purple-200',
+                  domain:   'hover:bg-[#fce4ec] hover:border-rose-400 hover:text-rose-900 dark:hover:bg-rose-900/50 dark:hover:border-rose-400 dark:hover:text-rose-200',
+                };
+                const skillCategory: Record<string, string> = {
+                  'Electron.js': 'core', 'Node.js': 'core', 'Express': 'core',
+                  'React': 'frontend', 'TypeScript': 'frontend', 'Three.js': 'frontend',
+                  'LightningChart JS': 'frontend', 'Leaflet': 'frontend',
+                  'Socket.IO': 'systems', 'TCP/UDP': 'systems',
+                  'WebSockets': 'systems', 'Real-time Systems': 'systems', 'SSH (node-ssh)': 'systems',
+                  'SQLite': 'core', 'electron-builder': 'tools', 'NSIS': 'tools', 'Playwright': 'tools',
+                  'Vitest': 'tools', 'Python': 'tools', 'ODAS': 'tools',
+                  'Raspberry Pi': 'tools', 'Embedded IoT': 'domain',
+                  'GIS / Offline Maps': 'domain', 'AI/RAG': 'domain', 'Wildlife Tech': 'domain',
+                };
+                return (
+                  <div className="pt-4 border-t border-dashed border-pencil/20 dark:border-paper/20">
+                    <div className="flex flex-wrap gap-1.5">
+                      {exp.skills.map((skill, sIdx) => {
+                        const cat = skillCategory[skill] ?? 'core';
+                        const hoverClass = hoverColors[cat];
+                        return (
+                          <span
+                            key={sIdx}
+                            style={{ borderRadius: '80px 12px 80px 12px / 12px 80px 12px 80px' }}
+                            className={`px-2.5 py-0.5 text-[11px] font-semibold border border-pencil dark:border-paper/40 bg-white dark:bg-zinc-900 text-pencil dark:text-paper/80 tracking-wide cursor-default transition-all duration-200 hover:scale-105 hover:-translate-y-px hover:shadow-[2px_2px_0px_0px_#2d2d2d] dark:hover:shadow-[2px_2px_0px_0px_rgba(253,251,247,0.3)] ${hoverClass}`}
+                          >
+                            {skill}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           );
         })}
 
-        {experiences.some(exp => exp.letterLink) && (
-          <div className="mt-8 flex justify-center">
-            <WobblyButton
-              variant="primary"
-              href={experiences.find(exp => exp.letterLink)?.letterLink}
-              target="_blank"
-              className="px-8 py-3.5 text-lg"
-            >
-              View Internship Letter <span className="text-base">→</span>
-            </WobblyButton>
-          </div>
-        )}
       </div>
     </section>
   );
