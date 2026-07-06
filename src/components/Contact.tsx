@@ -130,7 +130,7 @@ export const Contact: React.FC = () => {
             </div>
 
             <h4 className="text-2xl font-bold text-pencil dark:text-paper mb-2 font-marker">Ready to start a project?</h4>
-            <p className="text-base text-pencil/80 dark:text-paper/85 leading-relaxed mb-6">
+            <p className="text-base text-pencil/80 dark:text-paper/85 leading-relaxed mb-3">
               Drop me an email and let's bring your ideas to life. Let's make things that matter!
             </p>
           </div>
@@ -145,15 +145,6 @@ export const Contact: React.FC = () => {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               Send Email
-            </WobblyButton>
-
-            <WobblyButton
-              variant="outline"
-              href={portfolioData.experience[0]?.letterLink}
-              target="_blank"
-              className="w-full py-2 text-sm bg-white dark:bg-zinc-950 text-pencil dark:text-paper"
-            >
-              📥 Download Resume / Credentials
             </WobblyButton>
           </div>
         </div>
