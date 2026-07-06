@@ -164,7 +164,7 @@ export const portfolioData: PortfolioData = {
       subtitle: "Environmental Sound Classification",
       timeline: "May 2026",
       technologies: ["Python", "MFCC", "CNN", "LSTM", "Audio DSP"],
-      githubLink: "https://github.com/poornaprajays/Acoustic-Event-Detection",
+      githubLink: "https://github.com/poornaprajays/Acoustic-Event-Detection-AED.git",
       liveLink: "",
       description: "Developed a multi-label AED pipeline achieving 85%+ classification accuracy for temporally overlapping environmental sounds using MFCC/spectrogram features with CNN/LSTM classifiers. Designed as a modular research-grade component for integration into distributed IoT wildlife monitoring, building directly on production acoustic work."
     },
@@ -173,7 +173,7 @@ export const portfolioData: PortfolioData = {
       subtitle: "Online PDF Summarizer",
       timeline: "Jun 2026",
       technologies: ["React Vite", "Express", "PostgreSQL", "Google Gemini API", "Railway"],
-      githubLink: "https://github.com/poornaprajays/ai-pdf-summarizer",
+      githubLink: "https://github.com/poornaprajays/AI-PDF-Summarizer-.git",
       liveLink: "https://aipdfsummarizer.netlify.app/",
       description: "A full-stack AI-powered PDF summarization application built with Node.js, Express, PostgreSQL, Google Gemini API, and React (Vite). Allows users to upload documents, extract content, and fetch dynamic AI summaries via Google Gemini. Deployed frontend on Netlify and backend on Railway database pipelines."
     }
