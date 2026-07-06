@@ -153,7 +153,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "AI-Assisted Blind Navigation System",
       subtitle: "Real-Time Assistive Navigation",
-      timeline: "Mar 2026",
+      timeline: "In Progress",
       technologies: ["Python", "YOLOv8", "CNN", "Computer Vision", "TTS"],
       githubLink: "https://github.com/poornaprajays/VisionMate-AI",
       liveLink: "",
