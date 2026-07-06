@@ -132,8 +132,8 @@ export const portfolioData: PortfolioData = {
       logoChar: "A",
       responsibilities: [
         "Contributing to SonicWild, a production-grade Electron desktop application for wildlife eco-acoustic monitoring, managing real-time data from distributed IoT devices deployed in the field.",
-        "Built a real-time acoustic ingestion pipeline processing 60 FPS TCP data streams, reducing packet fragmentation errors by ~40% using a custom brace-counting JSON parser.",
-        "Implemented UDP broadcast network scanning with SSE streaming, enabling automatic discovery of field microphone arrays across dynamic subnets in under 3 seconds.",
+        "Handles a real-time acoustic ingestion pipeline processing 60 FPS TCP data streams, reducing packet fragmentation errors by ~40% using a custom brace-counting JSON parser.",
+        "Managed UDP broadcast network scanning with SSE streaming, enabling automatic discovery of field microphone arrays across dynamic subnets in under 3 seconds.",
         "Designed a file-based offline database (zodas_database.txt) managing project metadata, GPS mic coordinates, and device credentials—eliminating external DB dependencies for offline field deployment."
       ],
       skills: ["Electron.js", "Node.js", "Express", "React", "TypeScript", "Socket.IO", "TCP/UDP", "SQLite", "Three.js", "LightningChart JS", "Leaflet", "Raspberry Pi", "ODAS", "SSH (node-ssh)", "Python", "Playwright", "Vitest", "electron-builder", "NSIS", "WebSockets", "Real-time Systems", "Embedded IoT", "GIS / Offline Maps", "AI/RAG", "Wildlife Tech"]
