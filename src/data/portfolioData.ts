@@ -136,7 +136,7 @@ export const portfolioData: PortfolioData = {
         "Implemented UDP broadcast network scanning with SSE streaming, enabling automatic discovery of field microphone arrays across dynamic subnets in under 3 seconds.",
         "Designed a file-based offline database (zodas_database.txt) managing project metadata, GPS mic coordinates, and device credentials—eliminating external DB dependencies for offline field deployment."
       ],
-      skills: ["Electron.js", "Python", "Raspberry Pi", "ODAS Arrays", "WebSockets", "SSE", "TCP/UDP"]
+      skills: ["Electron.js", "Node.js", "Express", "React", "TypeScript", "Socket.IO", "TCP/UDP", "SQLite", "Three.js", "LightningChart JS", "Leaflet", "Raspberry Pi", "ODAS", "SSH (node-ssh)", "Python", "Playwright", "Vitest", "electron-builder", "NSIS", "WebSockets", "Real-time Systems", "Embedded IoT", "GIS / Offline Maps", "AI/RAG", "Wildlife Tech"]
     }
   ],
 
