@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const activeTheme = savedTheme || 'dark';
+    const activeTheme = savedTheme || 'light';
     setTheme(activeTheme);
     applyTheme(activeTheme);
   }, []);
